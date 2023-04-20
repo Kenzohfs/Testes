@@ -1,0 +1,10 @@
+{
+    "id": 0,
+    "nome": "João Henrique Meireles",
+    "telefone": "999999999",
+    "email": "joao_h_meireles@estudante.sc.senai.br",
+    "endereco": {
+      "id": 2
+    }
+}
+    
