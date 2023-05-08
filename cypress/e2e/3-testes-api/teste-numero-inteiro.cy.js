@@ -11,21 +11,21 @@ describe("Alunos", () => {
   let aluno = require("../../fixtures/aluno.json");
   let alunosLength = 0;
 
-  it("Busca todos os alunos", () => {
-    cy.request("GET", "http://localhost:8085/aluno").as("getAlunos");
-
-    cy.get("@getAlunos").then((response) => {
-      expect(response.body).to.have.length;
-      alunosLength = response.body.length;
-    });
-  });
-
   it("Cadastra um aluno", () => {
     cy.request("POST", "http://localhost:8085/aluno", aluno).as("postAluno");
 
     cy.get("@postAluno").then((response) => {
       expect(response.body).to.have.property("nome", "João Henrique Meireles");
       aluno = { ...response.body };
+    });
+  });
+
+  it("Busca todos os alunos", () => {
+    cy.request("GET", "http://localhost:8085/aluno").as("getAlunos");
+
+    cy.get("@getAlunos").then((response) => {
+      alunosLength = response.body.length - 1;
+      expect(response.body).to.have.length;
     });
   });
 

@@ -4,7 +4,12 @@
     "telefone": "999999999",
     "email": "joao_h_meireles@estudante.sc.senai.br",
     "endereco": {
-      "id": 2
+      "rua": "Rua do Afonso e Layne",
+      "numero": 99,
+      "cidade": "Jaraguá do Sul",
+      "estado": "Santa Catarina",
+      "bairro": "Centro Norte",
+      "cep": 89275000
     }
 }
     
